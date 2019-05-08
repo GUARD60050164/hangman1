@@ -50,7 +50,7 @@ class Client {
                 String response = (String) in.readObject();
                 leftTime = Integer.parseInt(response.substring(4,5));
                 String ans = response.substring(6, response.length());
-				System.out.println(" =11111= ");
+				
                 if(response.substring(0, 3).equals("400")){
                     System.out.println("incorrect , leftTime : " + leftTime);
 					 human( leftTime);
