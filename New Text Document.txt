@@ -1,0 +1,14 @@
+sever
+
+docker rm server -f
+docker rmi socket-server -f
+docker build -t socket-server .
+docker run --network=host --name=server socket-server 
+
+
+
+Client
+
+docker rmi socket-client -f
+docker build -t socket-client .
+docker run -i --network=host  socket-client
